@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="511.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memory.MemoryController">
+   <top>
+      <MenuBar prefHeight="29.0" prefWidth="394.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="%menu_game">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#actNewGame" text="%menu_option_new" />
+                  <MenuItem mnemonicParsing="false" onAction="#actClear" text="%menu_option_clear" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#actQuitterApp" text="%menu_option_quit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="%menu_view">
+               <items>
+                  <MenuItem fx:id="textSelectBtn" mnemonicParsing="false" onAction="#actChangeCardType" text="%menu_option_cards" />
+                  <MenuItem fx:id="colorsSelectBtn" mnemonicParsing="false" onAction="#actChangeCardType" text="%menu_option_colors" />
+                  <MenuItem fx:id="emojiSelectBtn" mnemonicParsing="false" onAction="#actChangeCardType" text="%menu_option_emoji" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="%menu_language">
+               <items>
+                  <MenuItem fx:id="languageBtn_en" mnemonicParsing="false" onAction="#actChangeLang" text="English" />
+                  <MenuItem fx:id="languageBtn_fr" mnemonicParsing="false" onAction="#actChangeLang" text="Français" />
+                  <MenuItem fx:id="languageBtn_es" mnemonicParsing="false" onAction="#actChangeLang" text="Español" />
+                  <MenuItem fx:id="languageBtn_cat" mnemonicParsing="false" onAction="#actChangeLang" text="Català" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="%menu_settings">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#actHelp" text="%menu_option_help" />
+                  <MenuItem mnemonicParsing="false" onAction="#actAbout" text="%menu_option_about" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <CheckMenuItem fx:id="cheatMode" mnemonicParsing="false" text="%menu_option_cheatmode" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <GridPane fx:id="gameGrid" alignment="CENTER" gridLinesVisible="true" hgap="5.0" prefHeight="452.0" prefWidth="453.0" vgap="5.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="57.0" prefWidth="453.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="51.0" prefWidth="164.0" text="%overlay_score" textAlignment="CENTER" />
+                  <Label fx:id="scoreCounter" prefHeight="37.0" prefWidth="103.0" text="0" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="37.0" prefWidth="111.0" text="%overlay_plays" textAlignment="CENTER" />
+                  <Label fx:id="playsCounter" prefHeight="37.0" prefWidth="37.0" text="0" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="51.0" prefWidth="104.0" text="%overlay_found" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="pairsFoundCounter" prefHeight="37.0" prefWidth="36.0" text="0" textAlignment="CENTER" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>
