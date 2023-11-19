@@ -2,19 +2,22 @@
 :toc:
 :toc-title: Summary
 
+:imagesdir: assets
+
 == Context
-During April 2023, in the process of learning the concepts of JavaFX and interfaces, we were asked to create a memory game starting from a tiny codebase. You can found the report of the project (in French) [here](./assets/IHM Compte Rendu - Aidan Balasch.pdf).
-image::./assets/app_main.png[Main menu]
+During April 2023, in the process of learning the concepts of JavaFX and interfaces, we were asked to create a memory game starting from a tiny codebase. You can found the report of the project (in French) https://github.com/AidanBalap/memory-game/blob/main/assets/IHM%20Compte%20Rendu%20-%20Aidan%20Balasch.pdf[here].
+
+image::app_main.png[Main menu]
 
 == Installation
-To run the project, you need to have JavaFX installed on your computer. You can download it [here](https://gluonhq.com/products/javafx/).
+To run the project, you need to have JavaFX installed on your computer. You can download it https://gluonhq.com/products/javafx/[here].
 
-Then, you need to add the JavaFX library to your project. To do so, you can follow the steps described [here](https://openjfx.io/openjfx-docs/#install-javafx).
+Then, you need to add the JavaFX library to your project. To do so, you can follow the steps described https://openjfx.io/openjfx-docs/#install-javafx[here]. 
 
 Finally, you can run the project by executing the `Main.java` file.
 
 == Download
-You can download the most up to date app in the [release page of this repository](https://github.com/AidanBalap/memory-game/releases). You can also download the source code of the project and run it yourself :).
+You can download the most up to date app in the https://github.com/AidanBalap/memory-game/releases[release page of this repository]. You can also download the source code of the project and run it yourself :).
 
 == Usage
 The game is pretty simple to use. Once tou ran the app, you can create a new game and some cards will appear. You can click on the cards to flip them. If you find two identical cards, they will stay flipped. Otherwise, they will flip back after a short delay.
@@ -25,23 +28,38 @@ When starting a new game, you can choose the number of pairs you want to play wi
 
 === Types of cards
 While playing, you can choose between three different types of cards:
+
 * Numbers (or cards)
-image::./assets/card_number.png[Numbers]
+
+image::card_number.png[Numbers]
+
 * Colors
-image::./assets/card_color.png[Colors]
+
+image::card_color.png[Colors]
+
 * Emojis
-image::./assets/card_emoji.png[Emojis]
+
+image::card_emoji.png[Emojis]
+
 
 === Language selector
 You can choose between four languages:
+
 * English
-image::./assets/app_en.png[English]
+
+image::app_en.png[English]
+
 * French (Default)
-image::./assets/app_fr.png[French]
+
+image::app_fr.png[French]
+
 * Spanish
-image::./assets/app_es.png[Spanish]
+
+image::app_es.png[Spanish]
+
 * Catalan 
-image::./assets/app_ca.png[Catalan]
+
+image::app_cat.png[Catalan]
 
 === Cheat mode
 You can activate the cheat mode in the settings of the game. This feature will spawn all pairs of cards next to each other. This way, you can easily find all the pairs (testing purposes).
